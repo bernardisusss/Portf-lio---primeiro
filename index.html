@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-w"></i>
+                    <div class="logo-text">Walisson Bernardo</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#resumo">Resumo</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="https://1drv.ms/i/c/7d28e79252e6492c/IQMGc5byPnW1Tosv2nq3_TSGAfcMkSmEWrV4q6cU2ImZ8Sc?width=660" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Opa! <span class="input">Desenvolvimento Front-End</span></h5>
+                    <h1>Walisson Bernardo</h1>
+                    <p> Olá!, tenho 18 anos e estudo Front-End e suas tecnologias.
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="#" class="btn active" id="download-cv">Currículo</a>
+                    </div>
+
+                    <div class="social">
+                        <a href= "https://www.linkedin.com/in/walisson-b-a4a765278/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href= "https://www.instagram.com/bernardisssus/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href= "https://github.com/bernardisusss" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    </div> 
+                 </div>
+            </div>
+        </div>
+     </div>
+     <div id="inicio">
+        <h2>Inicio</h2>
+        <p>Bem-vindo ao meu portfólio!</p>
+    </div>
+
+    <!-- Resumo -->
+    <div id="resumo">
+        <h2>Resumo</h2>
+        <p>Olá! me chamo Walisson Bernardo, tenho 18 anos, estou no último ano do meu ensino médio,<br>
+            pretendo fazer faculdade de Ads (Analise e Desenvolvimento de Software) já no ano que vem
+            quando acabar o colegial.<br>
+            sou um rapaz bastante esforçado, proativo e resiliente.<br>
+            estudo sobre Desenvolvimento Front-End e suas tecnologias.
+            sendo elas HTML, CSS e JAVASCRIPT.<br>
+            Com foco também no Back-End e futuramente o Full-Stack.
+        </p>
+    </div>
+    
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:[" Desenvolvimento Front-End","HTML, CSS"," JAVASCRIPT",],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+        const downloadCvButton = document.getElementById('download-cv');
+
+        downloadCvButton.addEventListener('click', () => {
+        const cvFile = 'Walisson Bernardo.pdf'; // substitua pelo seu próprio arquivo CV
+        const link = document.createElement('a');
+        link.href = cvFile;
+        link.download = cvFile;
+        link.click();
+        });
+     </script>
+</body>
+</html>
